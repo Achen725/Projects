@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <vector>
+
+using namespace std;
+// int x is the number that is factorialized
+int factorial (int x) {
+
+  int y = 1; //
+
+  while (x > 0) {
+
+    y = y * x; /* sets y = to the last number x is multiplied by
+    e.g. new y = old y * x
+         new y = 1 * 4
+         new y = 4 * 3 */
+    x = x - 1; //sets x = to the its descending value until the while loop is untrue
+  }
+  return y;
+}
+
+int main () {
+
+  int number; // A variable to store the value
+
+  cout << "Enter a Number to Factorialize: ";
+
+  cin >> number; // This is the value that will be factorialized
+
+
+  cout << factorial(number) << endl; // Prints out the function outside main with the value of number
+
+
+  return 0;
+}
